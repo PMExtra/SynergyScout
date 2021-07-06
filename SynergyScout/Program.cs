@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -54,7 +55,7 @@ namespace SynergyScout
 
         public static async Task Main(string[] args)
         {
-            const string version = "1.14.0-stable.67d824b8";
+            var version = args.SingleOrDefault() ?? "1.14.0-stable.67d824b8";
 
             foreach (var os in OSList.Keys)
             {
